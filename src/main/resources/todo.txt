@@ -1,0 +1,14 @@
+Bootstrap card(s) for Reimbursements
+-links to create new request, view old, etc.
+
+DONE: create stored procedures, triggers, sequences, etc. (PL/SQL)
+
+DONE: create tables, constraints (SQL)
+
+implement DAO design pattern (Java)
+
+write test cases (JUnit)
+
+write log statements (log4j)
+
+replace brand with "Welcome, ${name}" when a user logs in
