@@ -12,14 +12,14 @@
 	</properties>
 	<name>Michael Sikorski Project 1</name>
 	<url>http://maven.apache.org</url>
-	<repositories>
-		<!--other repositories if any -->
+	<!-- <repositories>
+		other repositories if any
 		<repository>
 			<id>project.local</id>
 			<name>project</name>
 			<url>file:${project.basedir}/repo</url>
 		</repository>
-	</repositories>
+	</repositories> -->
 
 	<dependencies>
 		<dependency>
