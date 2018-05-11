@@ -22,5 +22,11 @@ public class MasterServlet extends HttpServlet {
 		response.setHeader("Access-Control-Allow-Origin", "*");
 		response.getWriter().write(new ObjectMapper().writeValueAsString(RequestHelper.process(request,response)));
 	}
+	
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		response.setContentType("text/plain");
+		response.setHeader("Access-Control-Allow-Origin", "*");
+		response.getWriter().write("oops, something went wrong");
+	}
 
 }
