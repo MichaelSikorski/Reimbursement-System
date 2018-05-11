@@ -15,7 +15,7 @@ function loginEmployee() {
 			resolveLogin(JSON.parse(xhr.responseText));
 		}
 	};
-	xhr.open("POST", "http://localhost:8090/Reimbursement-System/MasterServlet/loginEmployee.msp1", true);
+	xhr.open("POST", "http://localhost:8090/Reimbursement-System/loginEmployee.msp1", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	if (email != "" && password != "") {
 		xhr.send("email=" + email + "&password=" + password);
