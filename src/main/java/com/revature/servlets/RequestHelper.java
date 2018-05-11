@@ -34,6 +34,13 @@ public class RequestHelper {
 			String newLast = req.getParameter("newLast");
 			return EmployeeService.getEmployeeService().updateEmployee(email, newUsername, newFirst, newLast);
 		default:
+			try {
+				res.getWriter().write("Something is wrong!");
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			return null;
 			return null;
 		}
 	}
