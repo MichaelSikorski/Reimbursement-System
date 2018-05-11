@@ -4,6 +4,14 @@
 
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
+	<filter>
+		<filter-name>SimpleCORSFilter</filter-name>
+		<filter-class>com.revature.servlets.SimpleCORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>SimpleCORSFilter</filter-name>
+		<url-pattern>*.msp1</url-pattern>
+	</filter-mapping>
 	<servlet>
 		<servlet-name>MasterServlet</servlet-name>
 		<display-name>MasterServlet</display-name>
