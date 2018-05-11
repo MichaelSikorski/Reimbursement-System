@@ -15,7 +15,7 @@ function loginEmployee() {
 			resolveLogin(JSON.parse(xhr.responseText));
 		}
 	};
-	xhr.open("POST", "http://localhost:8080/Project_1/loginEmployee.msp1", true);
+	xhr.open("POST", "http://localhost:8090/Reimbursement-System/loginEmployee.msp1", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	if (email != "" && password != "") {
 		xhr.send("email=" + email + "&password=" + password);
@@ -33,7 +33,7 @@ function loginManager() {
 			resolveLogin(JSON.parse(xhr.responseText));
 		}
 	};
-	xhr.open("POST", "http://localhost:8080/Project_1/loginManager.msp1", true);
+	xhr.open("POST", "http://localhost:8090/Reimbursement-System/loginManager.msp1", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	if (email != "" && password != "") {
 		xhr.send("email=" + email + "&password=" + password);
@@ -87,11 +87,11 @@ function resolveLogin(ajaxObject) {
 		if (type == "employee") {
 			//setCookie("email", email, 15);
 			//setCookie("type", type, 15);
-			document.getElementById("pipContent").src = "http://localhost:8080/Project_1/html/employeeHome.html";
+			document.getElementById("pipContent").src = "http://localhost:8090/Reimbursement-System/html/employeeHome.html";
 		} else {
 			//document.cookie = "email="+email+";path=/";
 			//document.cookie = "type=manager;path=/";
-			document.getElementById("pipContent").src = "http://localhost:8080/Project_1/html/managerHome.html";
+			document.getElementById("pipContent").src = "http://localhost:8090/Reimbursement-System/html/managerHome.html";
 		}
 		document.getElementById("form").style = "display:none";
 		var link = document.getElementsByClassName("nav-link")[0];
@@ -113,9 +113,9 @@ function logout() {
 		deleteCookie('type');
 	}
 	if (type == 'employee') {
-		document.location.href = "http://localhost:8080/Project_1/html/EmployeeLogin.html";
+		document.location.href = "http://localhost:8090/Reimbursement-System/html/EmployeeLogin.html";
 	} else {
-		document.location.href = "http://localhost:8080/Project_1/html/ManagerLogin.html";
+		document.location.href = "http://localhost:8090/Reimbursement-System/html/ManagerLogin.html";
 	}
 }
 
@@ -127,7 +127,7 @@ function resolveEmployeeLogin(ajaxObject) {
 	} else {
 		alert("Login employee");
 		document.cookie = "email="+ajaxObject+";path=/";
-		window.location.href = "http://localhost:8080/Project_1/html/employeeHome.html";
+		window.location.href = "http://localhost:8090/Reimbursement-System/html/employeeHome.html";
 	}*/
 	let email = ajaxObject.email;
 	let type = ajaxObject.type;
@@ -144,7 +144,7 @@ function resolveEmployeeLogin(ajaxObject) {
 		alert("Login employee");
 		document.cookie = "email="+email+";path=/";
 		document.cookie = "type="+type+";path=/";
-		document.getElementById("pipContent").src = "http://localhost:8080/Project_1/html/employeeHome.html";
+		document.getElementById("pipContent").src = "http://localhost:8090/Reimbursement-System/html/employeeHome.html";
 	}
 }
 
@@ -155,6 +155,6 @@ function resolveManagerLogin(ajaxObject) {
 		document.getElementById("message").innerHTML = "Your password was incorrect";
 	} else {
 		document.cookie = "email="+ajaxObject+";path=/";
-		window.location.href = "http://localhost:8080/Project_1/html/managerHome.html";
+		window.location.href = "http://localhost:8090/Reimbursement-System/html/managerHome.html";
 	}
 }
