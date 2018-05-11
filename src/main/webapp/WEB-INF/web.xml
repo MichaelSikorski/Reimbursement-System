@@ -5,60 +5,11 @@
 <web-app>
 	<display-name>Archetype Created Web Application</display-name>
 	<servlet>
-		<servlet-name>HelloWorld</servlet-name>
-		<display-name>HelloWorld</display-name>
-		<description></description>
-		<servlet-class>com.revature.servlets.HelloWorld</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>AjaxServlet</servlet-name>
-		<display-name>AjaxServlet</display-name>
-		<description></description>
-		<servlet-class>com.revature.servlets.AjaxServlet</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>LoginEmployee</servlet-name>
-		<display-name>LoginEmployee</display-name>
-		<description></description>
-		<servlet-class>com.revature.servlets.LoginEmployee</servlet-class>
-	</servlet>
-	<servlet>
-		<servlet-name>LoginManager</servlet-name>
-		<display-name>LoginManager</display-name>
-		<description></description>
-		<servlet-class>com.revature.servlets.LoginManager</servlet-class>
-	</servlet>
-	<servlet>
 		<servlet-name>MasterServlet</servlet-name>
 		<display-name>MasterServlet</display-name>
 		<description></description>
 		<servlet-class>com.revature.servlets.MasterServlet</servlet-class>
 	</servlet>
-
-	<servlet-mapping>
-		<servlet-name>HelloWorld</servlet-name>
-		<url-pattern>/HelloWorld</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AjaxServlet</servlet-name>
-		<url-pattern>/AjaxServlet</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>AjaxServlet</servlet-name>
-		<url-pattern>*.ajax</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>LoginEmployee</servlet-name>
-		<url-pattern>/LoginEmployee</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>LoginManager</servlet-name>
-		<url-pattern>/LoginManager</url-pattern>
-	</servlet-mapping>
-	<servlet-mapping>
-		<servlet-name>MasterServlet</servlet-name>
-		<url-pattern>/MasterServlet</url-pattern>
-	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>MasterServlet</servlet-name>
 		<url-pattern>*.msp1</url-pattern>
