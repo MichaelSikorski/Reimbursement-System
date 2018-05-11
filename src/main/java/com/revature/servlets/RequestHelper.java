@@ -7,6 +7,7 @@ import com.revature.service.*;
 public class RequestHelper {
 
 	public static Object process(HttpServletRequest req, HttpServletResponse res) {
+		System.out.println("RequestHelper received a request with the following URI: " + req.getRequestURI());
 		String uri = req.getRequestURI();
 		switch (uri) {
 		case "/Reimbursement-System/loginEmployee.msp1":
