@@ -15,10 +15,10 @@ function loginEmployee() {
 			resolveLogin(JSON.parse(xhr.responseText));
 		}
 	};
-	xhr.open("POST", "http://localhost:8090/Reimbursement-System/loginEmployee.msp1", true);
+	xhr.open("GET", "http://localhost:8090/Reimbursement-System/loginEmployee.msp1?email="+email+"&password="+password, true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	if (email != "" && password != "") {
-		xhr.send("email=" + email + "&password=" + password);
+		xhr.send();
 	} else {
 		document.getElementById("message").innerHTML = "Invalid username or password";
 	}	
