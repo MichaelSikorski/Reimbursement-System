@@ -15,7 +15,7 @@ function loginEmployee() {
 			resolveLogin(JSON.parse(xhr.responseText));
 		}
 	};
-	xhr.open("POST", "http://ec2-52-90-175-141.compute-1.amazonaws.com/Reimbursement-System/loginEmployee.msp1", true);
+	xhr.open("POST", "http://ec2-52-90-175-141.compute-1.amazonaws.com:8090/Reimbursement-System/loginEmployee.msp1", true);
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 	if (email != "" && password != "") {
 		xhr.send("email="+email+"&password="+password);
