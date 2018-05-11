@@ -18,12 +18,14 @@ public class MasterServlet extends HttpServlet {
     }
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Master Servlet received a POST request");
 		response.setContentType("application/json");
 		//response.setHeader("Access-Control-Allow-Origin", "*");
 		response.getWriter().write(new ObjectMapper().writeValueAsString(RequestHelper.process(request,response)));
 	}
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("Master Servlet received a GET request");
 		response.setContentType("application/json");
 		//response.setHeader("Access-Control-Allow-Origin", "*");
 		response.getWriter().write(new ObjectMapper().writeValueAsString(RequestHelper.process(request,response)));

@@ -13,6 +13,7 @@ public class EmployeeService {
 	}
 
 	public static EmployeeService getEmployeeService() {
+		System.out.println("An instance of the EmployeeService class has been requested");
 		if (employeeService == null) {
 			employeeService = new EmployeeService();
 		}
@@ -20,14 +21,17 @@ public class EmployeeService {
 	}
 	
 	public Employee getEmployee(String email) {
+		System.out.println("EmployeeService method getEmployee has been requested");
 		return EmployeeDAOImplement.getInstance().getEmployee(email);
 	}
 	
 	public List<Employee> getAllEmployees() {
+		System.out.println("EmployeeService method getAllEmployees has been requested");
 		return EmployeeDAOImplement.getInstance().getAllEmployees();
 	}
 	
 	public boolean updateEmployee(String email, String newUsername, String newFirst, String newLast) {
+		System.out.println("EmployeeService method updateEmployee has been requested");
 		return EmployeeDAOImplement.getInstance().updateEmployee(email, newUsername, newFirst, newLast);
 	}
 	/*

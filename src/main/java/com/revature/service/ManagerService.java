@@ -13,6 +13,7 @@ public class ManagerService {
 	}
 	
 	public static ManagerService getManagerService() {
+		System.out.println("An instance of the ManagerService class has been requested");
 		if (managerService == null) {
 			managerService = new ManagerService();
 		}

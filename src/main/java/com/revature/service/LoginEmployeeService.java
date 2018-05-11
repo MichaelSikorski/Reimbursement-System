@@ -8,6 +8,7 @@ import java.sql.*;
 public class LoginEmployeeService {
 	
 	public Login userOnDb(String email, String password) {
+		System.out.println("The LoginEmployeeService has been requested");
 		Login status = new Login("","unregistered");
 		try (Connection conn = ConnectionWithProperties.getConnection()){
 			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM EMPLOYEE WHERE e_email=?");
@@ -24,6 +25,9 @@ public class LoginEmployeeService {
 			LogUtil.logger.error(sqle.getMessage());
 			LogUtil.logger.error("SQL State: " + sqle.getSQLState());
 			LogUtil.logger.error("Error Code: " + sqle.getErrorCode());
+			System.out.println(sqle.getMessage());
+			System.out.println("SQL State: " + sqle.getSQLState());
+			System.out.println("Error Code: " + sqle.getErrorCode());
 		}
 		return status;
 	}

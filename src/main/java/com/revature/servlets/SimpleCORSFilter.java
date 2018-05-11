@@ -19,6 +19,8 @@ public SimpleCORSFilter() {
 
 @Override
 public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {    
+
+	System.out.println("Request has been intercepted by SimpleCORSFilter");
     
     HttpServletRequest request = (HttpServletRequest) req;
     HttpServletResponse response = (HttpServletResponse) res;
