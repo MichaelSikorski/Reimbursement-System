@@ -42,7 +42,6 @@ public class RequestHelper {
 				e.printStackTrace();
 			}
 			return null;
-			return null;
 		}
 	}
 
