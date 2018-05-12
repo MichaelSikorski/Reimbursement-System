@@ -29,6 +29,7 @@ public class ConnectionWithProperties {
 	public static Connection getConnection() {
 		InputStream in = null;
 		try {
+			in = in.getClass().getClassLoader().getResourceAsStream("db.properties");
 			Properties props = new Properties();
 			//ResourceBundle props = ResourceBundle.getBundle("db");
 			//in = new FileInputStream("src/main/resources/db.properties");
@@ -36,7 +37,8 @@ public class ConnectionWithProperties {
 			//in = new FileInputStream("C:\\Users\\Michael\\Documents\\workspace-sts-3.9.3.RELEASE\\Project_1\\src\\main\\resources\\db.properties");
 			//in = new FileInputStream("src\\main\\resources\\db.properties");
 			//props.load(in);
-			props.load(Properties.class.getResourceAsStream("/db.properties"));
+			//props.load(Properties.class.getResourceAsStream("/db.properties"));
+			props.load(in);
 			return DriverManager.getConnection(
 					props.getProperty("jdbc.url"),
 					props.getProperty("jdbc.username"),
