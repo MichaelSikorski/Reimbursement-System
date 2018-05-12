@@ -46,7 +46,7 @@ public class ConnectionWithProperties {
 					//props.getString("jdbc.url"),
 					//props.getString("jdbc.username"),
 					//props.getString("jdbc.password"));
-					"jdbc:oracle:thin:@jta1804-sikorski.cdj7nu7q0uns.us-east-1.rds.amazonaws.com:1521:ORCL",
+					"jdbc:oracle:thin:@project1@//jta1804-sikorski.cdj7nu7q0uns.us-east-1.rds.amazonaws.com:1521:ORCL",
 					"project1",
 					"project1");
 		} catch (SQLException e) {
