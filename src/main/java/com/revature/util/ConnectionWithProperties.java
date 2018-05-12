@@ -29,8 +29,8 @@ public class ConnectionWithProperties {
 	public static Connection getConnection() {
 		InputStream in = null;
 		try {
-			in = in.getClass().getClassLoader().getResourceAsStream("db.properties");
-			Properties props = new Properties();
+			//in = in.getClass().getClassLoader().getResourceAsStream("db.properties");
+			//Properties props = new Properties();
 			//ResourceBundle props = ResourceBundle.getBundle("db");
 			//in = new FileInputStream("src/main/resources/db.properties");
 			//System.out.println(ConnectionWithProperties.class.getProtectionDomain().getCodeSource().getLocation().getFile());
@@ -38,7 +38,7 @@ public class ConnectionWithProperties {
 			//in = new FileInputStream("src\\main\\resources\\db.properties");
 			//props.load(in);
 			//props.load(Properties.class.getResourceAsStream("/db.properties"));
-			props.load(in);
+			//props.load(in);
 			return DriverManager.getConnection(
 					//props.getProperty("jdbc.url"),
 					//props.getProperty("jdbc.username"),
@@ -48,14 +48,14 @@ public class ConnectionWithProperties {
 					//props.getString("jdbc.password"));
 					"jdbc:oracle:thin:@jta1804-sikorski.cdj7nu7q0uns.us-east-1.rds.amazonaws.com:1521:ORCL",
 					"project1",
-					"project1"
+					"project1");
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 			System.err.println("SQL state: " + e.getSQLState());
 			System.err.println("Error code: " + e.getErrorCode());
 		//} //catch (FileNotFoundException fnfe) {
 			//System.err.println(fnfe.getMessage());
-		} catch (IOException ioe) {
+		//} catch (IOException ioe) {
 		//	System.err.println(ioe.getMessage());
 		//} catch (Exception e) {
 		//	System.out.println(e.getMessage());
