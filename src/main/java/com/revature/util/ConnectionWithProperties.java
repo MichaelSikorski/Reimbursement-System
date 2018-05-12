@@ -40,12 +40,15 @@ public class ConnectionWithProperties {
 			//props.load(Properties.class.getResourceAsStream("/db.properties"));
 			props.load(in);
 			return DriverManager.getConnection(
-					props.getProperty("jdbc.url"),
-					props.getProperty("jdbc.username"),
-					props.getProperty("jdbc.password"));
+					//props.getProperty("jdbc.url"),
+					//props.getProperty("jdbc.username"),
+					//props.getProperty("jdbc.password"));
 					//props.getString("jdbc.url"),
 					//props.getString("jdbc.username"),
 					//props.getString("jdbc.password"));
+					"jdbc:oracle:thin:@jta1804-sikorski.cdj7nu7q0uns.us-east-1.rds.amazonaws.com:1521:ORCL",
+					"project1",
+					"project1"
 		} catch (SQLException e) {
 			System.err.println(e.getMessage());
 			System.err.println("SQL state: " + e.getSQLState());
